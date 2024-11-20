@@ -1,13 +1,37 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/product.schema.json",
-  "title": "",
+  "$id": "https://example.com/content.schema.json",
+  "title": "content",
   "description": "",
   "type": "object",
   "properties": {
+    "size": {
+      "type": "integer",
+      "description": "Length of the returned content in bytes. Should be equal to response.bodySize if there is no compression and bigger when the content has been compressed."
+    },
+    "compression": {
+      "type": "integer",
+      "description": "Number of bytes saved. Leave out this field if the information is not available."
+    },
+    "mimeType": {
+      "type": "string",
+      "description": "MIME type of the response text (value of the Content-Type response header). The charset attribute of the MIME type is included (if available)."
+    },
+    "text": {
+      "type": "string",
+      "description": "Response body sent from the server or loaded from the browser cache. This field is populated with textual content only. The text field is either HTTP decoded text or a encoded (e.g. \"base64\") representation of the response body. Leave out this field if the information is not available."
+    },
+    "encoding": {
+      "type": "string",
+      "description": "Encoding used for response text field e.g \"base64\". Leave out this field if the text field is HTTP decoded (decompressed & unchunked), than trans-coded from its original character set into UTF-8."
+    },
     "comment": {
-      "type": "string"
+      "type": "string",
+      "description": ""
     }
   },
-  "required": []
+  "required": [
+    "size",
+    "mimeType"
+  ]
 }

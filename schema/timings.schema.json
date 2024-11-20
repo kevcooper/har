@@ -5,9 +5,42 @@
   "description": "",
   "type": "object",
   "properties": {
+    "blocked": {
+      "type": "integer",
+      "description": "Time spent in a queue waiting for a network connection. Use -1 if the timing does not apply to the current request."
+    },
+    "dns": {
+      "type": "integer",
+      "description": "DNS resolution time. The time required to resolve a host name. Use -1 if the timing does not apply to the current request."
+    },
+    "connect": {
+      "type": "integer",
+      "description": "Time required to create TCP connection. Use -1 if the timing does not apply to the current request."
+    },
+    "send": {
+      "type": "integer",
+      "description": "Time required to send HTTP request to the server."
+    },
+    "wait": {
+      "type": "integer",
+      "description": "Waiting for a response from the server."
+    },
+    "receive": {
+      "type": "integer",
+      "description": "Time required to read entire response from the server (or cache)."
+    },
+    "ssl": {
+      "type": "integer",
+      "description": "Time required for SSL/TLS negotiation. If this field is defined then the time is also included in the connect field (to ensure backward compatibility with HAR 1.1). Use -1 if the timing does not apply to the current request."
+    },
     "comment": {
-      "type": "string"
+      "type": "string",
+      "description": "A comment provided by the user or the application."
     }
   },
-  "required": []
+  "required": [
+    "send",
+    "wait",
+    "receive"
+  ]
 }

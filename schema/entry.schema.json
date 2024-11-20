@@ -1,13 +1,57 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/product.schema.json",
-  "title": "",
+  "$id": "https://example.com/entry.schema.json",
+  "title": "entry",
   "description": "",
   "type": "object",
   "properties": {
+    "pageref": {
+      "type": "string",
+      "description": "Reference to the parent page. Leave out this field if the application does not support grouping by pages.",
+      "unique": true
+    },
+    "startedDateTime": {
+      "type": "string",
+      "description": "Date and time stamp of the request start (ISO 8601 - YYYY-MM-DDThh:mm:ss.sTZD)."
+    },
+    "time": {
+      "type": "integer",
+      "description": "Total elapsed time of the request in milliseconds. This is the sum of all timings available in the timings object (i.e. not including -1 values)."
+    },
+    "request": {
+      "$ref": "/request.schema.json",
+      "description": "Detailed info about the request."
+    },
+    "response": {
+      "$ref": "/response.schema.json",
+      "description": "Detailed info about the response."
+    },
+    "cache": {
+      "$ref": "/cache.schema.json",
+      "description": "Info about cache usage."
+    },
+    "timings": {
+      "$ref": "/timings.schema.json",
+      "description": "Detailed timing info about request/response round trip."
+    },
+    "serverIPAddress": {
+      "type": "string",
+      "description": "IP address of the server that was connected (result of DNS resolution)."
+    },
+    "connection": {
+      "type": "string",
+      "description": "Unique ID of the parent TCP/IP connection, can be the client or server port number. Note that a port number doesn't have to be unique identifier in cases where the port is shared for more connections. If the port isn't available for the application, any other unique connection ID can be used instead (e.g. connection index). Leave out this field if the application doesn't support this info."
+    },
     "comment": {
-      "type": "string"
+      "type": "string",
+      "description": "A comment provided by the user or the application."
     }
   },
-  "required": []
+  "required": [
+    "startedDateTime",
+    "time",
+    "request",
+    "response",
+    "timings"
+  ]
 }

@@ -1,13 +1,32 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/product.schema.json",
-  "title": "",
+  "$id": "https://example.com/param.schema.json",
+  "title": "param",
   "description": "",
   "type": "object",
   "properties": {
+    "name": {
+      "type": "string",
+      "description": "name of a posted parameter."
+    },
+    "value": {
+      "type": "string",
+      "description": "value of a posted parameter or content of a posted file."
+    },
+    "fileName": {
+      "type": "string",
+      "description": "name of a posted file."
+    },
+    "contentType": {
+      "type": "string",
+      "description": "content type of a posted file."
+    },
     "comment": {
-      "type": "string"
+      "type": "string",
+      "description": "A comment provided by the user or the application."
     }
   },
-  "required": []
+  "required": [
+    "name"
+  ]
 }

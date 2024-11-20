@@ -1,12 +1,57 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/product.schema.json",
+  "$id": "https://example.com/cache.schema.json",
   "title": "cache",
   "description": "",
   "type": "object",
+  "$defs": {
+    "cacheObject": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "https://example.com/cacheObject.schema.json",
+      "title": "cacheObject",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "expires": {
+          "type": "string",
+          "description": "Expiration time of the cache entry."
+        },
+        "lastAccess": {
+          "type": "string",
+          "description": "The last time the cache entry was opened."
+        },
+        "eTag": {
+          "type": "string",
+          "description": "Etag"
+        },
+        "hitCount": {
+          "type": "integer",
+          "description": "The number of times the cache entry has been opened."
+        },
+        "comment": {
+          "type": "string",
+          "description": "A comment provided by the user or the application."
+        }
+      },
+      "required": [
+        "lastAccess",
+        "eTag",
+        "hitCount"
+      ]
+    }
+  },
   "properties": {
+    "beforeRequest": {
+      "$ref": "#/$defs/cacheObject",
+      "description": "State of a cache entry before the request. Leave out this field if the information is not available."
+    },
+    "afterRequest": {
+      "$ref": "#/$defs/cacheObject",
+      "description": "State of a cache entry after the request. Leave out this field if the information is not available."
+    },
     "comment": {
-      "type": "string"
+      "type": "string",
+      "description": "A comment provided by the user or the application."
     }
   },
   "required": []

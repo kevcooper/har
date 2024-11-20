@@ -1,13 +1,25 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/product.schema.json",
+  "$id": "https://example.com/browser.schema.json",
   "title": "browser",
-  "description": "",
+  "description": "Browser used for session",
   "type": "object",
   "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the browser used to export the log."
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the browser used to export the log."
+    },
     "comment": {
-      "type": "string"
+      "type": "string",
+      "description": "A comment provided by the user or the application."
     }
   },
-  "required": []
+  "required": [
+    "name",
+    "version"
+  ]
 }

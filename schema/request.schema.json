@@ -1,13 +1,68 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/product.schema.json",
-  "title": "",
+  "$id": "https://example.com/request.schema.json",
+  "title": "request",
   "description": "",
   "type": "object",
   "properties": {
+    "method": {
+      "type": "string",
+      "description": "Request method (GET, POST, ...)."
+    },
+    "url": {
+      "type": "string",
+      "description": "Absolute URL of the request (fragments are not included)."
+    },
+    "httpVersion": {
+      "type": "string",
+      "description": "Request HTTP Version."
+    },
+    "cookies": {
+      "type": "array",
+      "items": {
+        "$ref": "/cookie.schema.json"
+      },
+      "description": "List of cookie objects."
+    },
+    "headers": {
+      "type": "array",
+      "items": {
+        "$ref": "/nvp.schema.json"
+      },
+      "description": "List of header objects."
+    },
+    "queryString": {
+      "type": "array",
+      "items": {
+        "$ref": "/nvp.schema.json"
+      },
+      "description": "List of query parameter objects."
+    },
+    "postData": {
+      "$ref": "/postData.schema.json",
+      "description": "Posted data info."
+    },
+    "headersSize": {
+      "type": "integer",
+      "description": "Total number of bytes from the start of the HTTP request message until (and including) the double CRLF before the body. Set to -1 if the info is not available."
+    },
+    "bodySize": {
+      "type": "integer",
+      "description": "Size of the request body (POST data payload) in bytes. Set to -1 if the info is not available."
+    },
     "comment": {
-      "type": "string"
+      "type": "string",
+      "description": "A comment provided by the user or the application."
     }
   },
-  "required": []
+  "required": [
+    "method",
+    "url",
+    "httpVersion",
+    "cookies",
+    "headers",
+    "queryString",
+    "headersSize",
+    "bodySize"
+  ]
 }

@@ -1,17 +1,17 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/creator.schema.json",
-  "title": "creator",
-  "description": "Log creator application",
+  "$id": "https://example.com/nvp.schema.json",
+  "title": "nvp",
+  "description": "Name-Value pair",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
-      "description": "Name of the application used to export the log."
+      "description": "Name of the pair."
     },
-    "version": {
+    "value": {
       "type": "string",
-      "description": "Version of the application used to export the log."
+      "description": "Value of the pair."
     },
     "comment": {
       "type": "string",
@@ -20,6 +20,6 @@
   },
   "required": [
     "name",
-    "version"
+    "value"
   ]
 }
