@@ -11,7 +11,7 @@
       "unique": true
     },
     "startedDateTime": {
-      "type": "string",
+      "type": "date-time",
       "description": "Date and time stamp of the request start (ISO 8601 - YYYY-MM-DDThh:mm:ss.sTZD)."
     },
     "time": {
