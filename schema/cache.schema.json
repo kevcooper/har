@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/cache.schema.json",
+  "$id": "https://kevincooper.github.io/har/schema/cache.schema.json",
   "title": "cache",
   "description": "",
   "type": "object",
   "$defs": {
     "cacheObject": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
-      "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/cacheObject",
+      "$id": "https://kevincooper.github.io/har/schema/cacheObject",
       "title": "cacheObject",
       "description": "",
       "type": "object",
