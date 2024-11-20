@@ -35,7 +35,7 @@
       "description": "Detailed timing info about request/response round trip."
     },
     "serverIPAddress": {
-      "type": "string",
+      "type": ["ipv4", "ipv6"],
       "description": "IP address of the server that was connected (result of DNS resolution)."
     },
     "connection": {
