@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://kevincooper.github.io/har/schema/page.schema.json",
+  "$id": "https://kevcooper.github.io/har/schema/page.schema.json",
   "title": "page",
   "description": "",
   "type": "object",
