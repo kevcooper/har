@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/schemas/cookie",
+  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/cookie.schema.json",
   "title": "cookie",
   "description": "",
   "type": "object",

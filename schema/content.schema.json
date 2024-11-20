@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/schemas/content",
+  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/content.schema.json",
   "title": "content",
   "description": "",
   "type": "object",

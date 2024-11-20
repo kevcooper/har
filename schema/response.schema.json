@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/schemas/response",
+  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/response.schema.json",
   "title": "response",
   "description": "",
   "type": "object",
@@ -20,19 +20,19 @@
     "cookies": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/cookie"
+        "$ref": "cookie.schema.json"
       },
       "description": "List of cookie objects."
     },
     "headers": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/nvp"
+        "$ref": "nvp.schema.json"
       },
       "description": "List of header objects."
     },
     "content": {
-      "$ref": "/schemas/content",
+      "$ref": "content.schema.json",
       "description": "Details about the response body."
     },
     "redirectURL": {

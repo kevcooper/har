@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/schemas/request",
+  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/request.schema.json",
   "title": "request",
   "description": "",
   "type": "object",
@@ -31,26 +31,26 @@
     "cookies": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/cookie"
+        "$ref": "cookie.schema.json"
       },
       "description": "List of cookie objects."
     },
     "headers": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/nvp"
+        "$ref": "nvp.schema.json"
       },
       "description": "List of header objects."
     },
     "queryString": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/nvp"
+        "$ref": "nvp.schema.json"
       },
       "description": "List of query parameter objects."
     },
     "postData": {
-      "$ref": "/schemas/postData",
+      "$ref": "postData.schema.json",
       "description": "Posted data info."
     },
     "headersSize": {

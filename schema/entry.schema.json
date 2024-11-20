@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/schemas/entry",
+  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/entry.schema.json",
   "title": "entry",
   "description": "",
   "type": "object",
@@ -19,19 +19,19 @@
       "description": "Total elapsed time of the request in milliseconds. This is the sum of all timings available in the timings object (i.e. not including -1 values)."
     },
     "request": {
-      "$ref": "/schemas/request",
+      "$ref": "request.schema.json",
       "description": "Detailed info about the request."
     },
     "response": {
-      "$ref": "/schemas/response",
+      "$ref": "response.schema.json",
       "description": "Detailed info about the response."
     },
     "cache": {
-      "$ref": "/schemas/cache",
+      "$ref": "cache.schema.json",
       "description": "Info about cache usage."
     },
     "timings": {
-      "$ref": "/schemas/timings",
+      "$ref": "timings.schema.json",
       "description": "Detailed timing info about request/response round trip."
     },
     "serverIPAddress": {

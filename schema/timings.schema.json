@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/schemas/timings",
+  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/timings.schema.json",
   "title": "timings",
   "description": "",
   "type": "object",

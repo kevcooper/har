@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/schemas/log",
+  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/log.schema.json",
   "title": "log",
   "description": "This object represents the root of exported data",
   "type": "object",
@@ -10,24 +10,24 @@
       "description": "Version number of the format. If empty, string \"1.1\" is assumed by default."
     },
     "creator": {
-      "$ref": "/schemas/creator",
+      "$ref": "creator.schema.json",
       "description": "Name and version info of the log creator application."
     },
     "browser": {
-      "$ref": "/schemas/browser",
+      "$ref": "browser.schema.json",
       "description": "Name and version info of used browser."
     },
     "pages": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/page"
+        "$ref": "page.schema.json"
       },
       "description": "List of all exported (tracked) pages. Leave out this field if the application does not support grouping by pages."
     },
     "entries": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/entry"
+        "$ref": "entry.schema.json"
       },
       "description": "List of all exported (tracked) requests."
     },

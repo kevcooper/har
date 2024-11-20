@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/schemas/browser",
+  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/browser.schema.json",
   "title": "browser",
   "description": "Browser used for session",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/schemas/nvp",
+  "$id": "https://raw.githubusercontent.com/kevcooper/har/refs/heads/main/schemas/nvp.schema.json",
   "title": "nvp",
   "description": "Name-Value pair",
   "type": "object",
