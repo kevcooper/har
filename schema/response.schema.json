@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/response.schema.json",
+  "$id": "https://example.com/schemas/response",
   "title": "response",
   "description": "",
   "type": "object",
@@ -20,19 +20,19 @@
     "cookies": {
       "type": "array",
       "items": {
-        "$ref": "/cookie.schema.json"
+        "$ref": "/schemas/cookie"
       },
       "description": "List of cookie objects."
     },
     "headers": {
       "type": "array",
       "items": {
-        "$ref": "/nvp.schema.json"
+        "$ref": "/schemas/nvp"
       },
       "description": "List of header objects."
     },
     "content": {
-      "$ref": "/content.schema.json",
+      "$ref": "/schemas/content",
       "description": "Details about the response body."
     },
     "redirectURL": {

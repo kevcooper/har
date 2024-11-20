@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/cache.schema.json",
+  "$id": "https://example.com/schemas/cache",
   "title": "cache",
   "description": "",
   "type": "object",
   "$defs": {
     "cacheObject": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
-      "$id": "https://example.com/cacheObject.schema.json",
+      "$id": "https://example.com/schemas/cacheObject",
       "title": "cacheObject",
       "description": "",
       "type": "object",
@@ -42,11 +42,11 @@
   },
   "properties": {
     "beforeRequest": {
-      "$ref": "#/$defs/cacheObject",
+      "$ref": "/schemas#/$defs/cacheObject",
       "description": "State of a cache entry before the request. Leave out this field if the information is not available."
     },
     "afterRequest": {
-      "$ref": "#/$defs/cacheObject",
+      "$ref": "/schemas#/$defs/cacheObject",
       "description": "State of a cache entry after the request. Leave out this field if the information is not available."
     },
     "comment": {

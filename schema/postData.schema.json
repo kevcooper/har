@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/postData.schema.json",
+  "$id": "https://example.com/schemas/postData",
   "title": "postData",
   "description": "",
   "type": "object",
@@ -12,7 +12,7 @@
     "params": {
       "type": "array",
       "items": {
-        "$ref": "/param.schema.json"
+        "$ref": "/schemas/param"
       },
       "description": "List of posted parameters (in case of URL encoded parameters)."
     },

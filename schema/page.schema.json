@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/page.schema.json",
+  "$id": "https://example.com/schemas/page",
   "title": "page",
   "description": "",
   "type": "object",
@@ -18,7 +18,7 @@
       "description": "Page title."
     },
     "pageTimings": {
-      "$ref": "/pageTimings.schema.json",
+      "$ref": "/schemas/pageTimings",
       "description": "Detailed timing info about page load."
     },
     "comment": {
