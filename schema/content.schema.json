@@ -27,7 +27,7 @@
     },
     "comment": {
       "type": "string",
-      "description": ""
+      "description": "A comment provided by the user or the application."
     }
   },
   "required": [
