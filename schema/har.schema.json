@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kevcooper.github.io/har/schema/har.schema.json",
+  "title": "har",
+  "description": "This object represents the container for all logged data",
+  "type": "object",
+  "properties": {
+    "log": {
+      "$ref": "log.schema.json",
+      "description": "The HTTP log object."
+    },
+    "comment": {
+      "type": "string",
+      "description": "A comment provided by the user or the application."
+    }
+  },
+  "required": [
+    "log"
+  ]
+}
